@@ -53,7 +53,6 @@ def get_record_id(zone_id, ddns_domain, myip):
     global headers
     data = requests.get(f"https://api.cloudflare.com/client/v4/zones/{zone_id}/dns_records", headers=headers, verify=False)
     data = data.json()
-    print(data)
     filtered_result = [item for item in data['result'] if item['name'] == ddns_domain and item['type'] == 'A']
     if len(filtered_result) == 0:
         create_record(zone_id, ddns_domain, myip)
