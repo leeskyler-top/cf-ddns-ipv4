@@ -1,4 +1,5 @@
 import json
+import os.path
 import sys
 from datetime import datetime
 
@@ -91,7 +92,8 @@ def update_record(zone_id, record_id, ddns_name, myip):
 
 if __name__ == '__main__':
     # Open and read the config.json file
-    with open('config.json', 'r') as file:
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    with open(os.path.join(script_dir, "config.json"), 'r') as file:
         config = json.load(file)
 
     # Access the data using dictionary keys
