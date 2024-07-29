@@ -1,0 +1,8 @@
+{
+  "get_ip_api": "https://my.ipip.net/ip",
+  "get_ip_api_key": "ip",
+  "get_ip_api_regex": "\\b(?:[0-9]{1,3}\\.){3}[0-9]{1,3}\\b",
+  "token": "1145141919810",
+  "domain": "abc.com",
+  "ddns_domain": "xxx.abc.com"
+}
